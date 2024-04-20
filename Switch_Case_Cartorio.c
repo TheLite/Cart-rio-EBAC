@@ -1,15 +1,15 @@
-#include <stdio.h> //biblioteca de comunicaÁ„o com o usuario.
-#include <stdlib.h> //biblioteca de alocaÁ„o de espaÁo em memoria 
-#include <locale.h> //biblioteca de alocaÁ„o de linguagem
-#include <string.h> //biblioteca de alocaÁ„o de string
+#include <stdio.h> //biblioteca de comunica√ß√£o com o usuario.
+#include <stdlib.h> //biblioteca de aloca√ß√£o de espa√ßo em memoria 
+#include <locale.h> //biblioteca de aloca√ß√£o de linguagem
+#include <string.h> //biblioteca de aloca√ß√£o de string
 
 
 int main ()
 {
-	int opcao=0; //Usamos int para definir as vari·veis (por enquanto relativo ‡s opÁıes que podemos escolher)
-	int laco=1; //O mesmo acima vale para essa linha, porÈm agora a intenÁ„o È criar um loop (Inicio de declaraÁ„o da variavel p/ loop)
+	int opcao=0; //Usamos int para definir as vari√°veis (por enquanto relativo √†s op√ß√µes que podemos escolher)
+	int laco=1; //O mesmo acima vale para essa linha, por√©m agora a inten√ß√£o √© criar um loop (Inicio de declara√ß√£o da variavel p/ loop)
 	
-	int reg() //Abreviei todas as funÁıes, para esclarecer reg=registrar cons=consultar e del=deletar (Se caso outros lerem È bom registrar para evitar d˙vidas)
+	int reg() //Abreviei todas as fun√ß√µes, para esclarecer reg=registrar cons=consultar e del=deletar (Se caso outros lerem √© bom registrar para evitar d√∫vidas)
 	{
 		setlocale(LC_ALL, "Portuguese");
 		char arquivo[40];
@@ -19,10 +19,10 @@ int main ()
 		char cargo[40];
 		
 		printf("Digite o CPF a ser cadastrado:");
-		scanf("%s", cpf); //Bom, ja sabemos que o scanf armazena vari·veis porÈm dessa vez ele vai armazenar strings ao invÈs de um numero inteiro.
+		scanf("%s", cpf); //Bom, ja sabemos que o scanf armazena vari√°veis por√©m dessa vez ele vai armazenar strings ao inv√©s de um numero inteiro.
 		strcpy(arquivo, cpf); //Serve para copiar o valor das strings 
 		
-		FILE *file; //FILE em maiusculo È a chaamada de uma funÁ„o ja pronta, o file em minusculo vai criar um arquivo.
+		FILE *file; //FILE em maiusculo √© a chaamada de uma fun√ß√£o ja pronta, o file em minusculo vai criar um arquivo.
 		
 		file = fopen(arquivo, "a"); // Inverti a ordem de abertura para no final ficar especificado certinho
 	 	fprintf(file,"\tCPF   ");  // seguindo a ordem que estava antes, quando eu tentei deixar cada coisa com o nome certinho ele pulava o cargo e bom, ficava bem confuso...
@@ -83,12 +83,12 @@ int main ()
 		
 		if(file == NULL) 
 		{
-			printf("CPF N„o localizado! ");
+			printf("CPF N√£o localizado! ");
 			system("pause");
 		}
 		while(fgets(conteudo, 200, file) != NULL)
 		{
-			printf("\nInformaÁıes do CPF consultado: ");
+			printf("\nInforma√ß√µes do CPF consultado: ");
 			printf("%s", conteudo);
 			printf("\n\n\n");
 			
@@ -110,13 +110,13 @@ int main ()
 		
 		if(file == NULL) //fiz assim, se for nulo printa isso
 		{
-			printf("CPF n„o encontrado para deleÁ„o!\n");
+			printf("CPF n√£o encontrado para dele√ß√£o!\n");
 			system("pause");
 			
 		}
 		else
 		{
-			printf("Usu·rio deletado com sucesso!\n");
+			printf("Usu√°rio deletado com sucesso!\n");
 			system("pause");
 		}
 		
@@ -124,31 +124,31 @@ int main ()
 		
 	}
 	
-	for (laco=1;laco=1;) //Enquanto o laÁo for 1, ele vai continuar repetindo (Inicio do laÁo)
+	for (laco=1;laco=1;) //Enquanto o la√ßo for 1, ele vai continuar repetindo (Inicio do la√ßo)
 	{
 	
-		system("cls"); //Limpa a tela, evita poluiÁ„o visual.
+		system("cls"); //Limpa a tela, evita polui√ß√£o visual.
 		
     	setlocale(LC_ALL, "Portuguese"); //Aqui definimos a lingua (PT-BR) 
 
-    	printf("Cadastro de Alunos EBAC \n\n"); //printf È o meio de comunicaÁ„o entre o sistema e o user. EstruturaÁ„o do menu, em tese o que o usu·rio pode escolher. Na pr·tica È sÛ texto por enquanto. - Inicio visivel p/user
-    	printf("Escolha a opÁ„o desejada:\n\n"); // \t(x) gera um tÛpico com um numero atribuido (Funciona com letras, porÈm a variavel n„o pode ser inteira se for o caso). 
-    	printf("\t1 Registrar Nomes.\n"); // \n = pular uma linha, evita poluiÁ„o visual.
+    	printf("Cadastro de Alunos EBAC \n\n"); //printf √© o meio de comunica√ß√£o entre o sistema e o user. Estrutura√ß√£o do menu, em tese o que o usu√°rio pode escolher. Na pr√°tica √© s√≥ texto por enquanto. - Inicio visivel p/user
+    	printf("Escolha a op√ß√£o desejada:\n\n"); // \t(x) gera um t√≥pico com um numero atribuido (Funciona com letras, por√©m a variavel n√£o pode ser inteira se for o caso). 
+    	printf("\t1 Registrar Nomes.\n"); // \n = pular uma linha, evita polui√ß√£o visual.
     	printf("\t2 Consultar Nomes.\n");
     	printf("\t3 Deletar Nomes.\n"); 
-		printf("OpÁ„o:"); //fim do menu visivel p/ user
+		printf("Op√ß√£o:"); //fim do menu visivel p/ user
     
-   		scanf("%d", &opcao); //Armazenamento de escolhas para o usu·rio sendo o scanf("%d"[aqui alocamos a variavel inteira], &opcao [& serve para demonstrar **onde a variavel ser· armazenada)
+   		scanf("%d", &opcao); //Armazenamento de escolhas para o usu√°rio sendo o scanf("%d"[aqui alocamos a variavel inteira], &opcao [& serve para demonstrar **onde a variavel ser√° armazenada)
    
    		system ("cls"); //Descarregando a interface de excesso de info dos outros menus - importante para guiar melhor o user.
    
    		
 		
 		
-			switch (opcao) //ComeÁo das entradas de variaveis //Cada if representa uma opÁ„o criada de menu, portanto ele vai armazenar as variaveis e relacionar com a opÁ„o do menu, ou se n„o houver relaÁ„o vai informar ao user.
-			{	case 1:    //Como o if foi substituido pelo case È importante lembrar que o comeÁo do comando È com switch e para cada caso declarar 1 variavel
+			switch (opcao) //Come√ßo das entradas de variaveis //Cada if representa uma op√ß√£o criada de menu, portanto ele vai armazenar as variaveis e relacionar com a op√ß√£o do menu, ou se n√£o houver rela√ß√£o vai informar ao user.
+			{	case 1:    //Como o if foi substituido pelo case √© importante lembrar que o come√ßo do comando √© com switch e para cada caso declarar 1 variavel
 		    	reg();
-   				break; //Cada vari·vel deve terminar com um "break". 
+   				break; //Cada vari√°vel deve terminar com um "break". 
    			
 				case 2:
 					cons();
@@ -157,9 +157,15 @@ int main ()
 	   			case 3:
 	   				del();
 	   			break;
+
+			 	case 4:
+			 		printf("Obrigado por utilizar o sistema de cadastros!\n\n");
+			 		return:0;
+			 	break;
+			 		
 	   			
-	   			default: //Quando quisermos colocar uma opÁ„o para uma variavel n„o prevista usaremos "default". Ou seja por padr„o se a variavel n„o for 1,2 ou 3 ent„o <resultado abaixo>.
-	   				printf("OpÁ„o inv·lida, escolha uma opÁ„o de 1 a 3.\n"); //default n„o precisa de break 
+	   			default: //Quando quisermos colocar uma op√ß√£o para uma variavel n√£o prevista usaremos "default". Ou seja por padr√£o se a variavel n√£o for 1,2 ou 3 ent√£o <resultado abaixo>.
+	   				printf("Op√ß√£o inv√°lida, escolha uma op√ß√£o de 1 a 3.\n"); //default n√£o precisa de break 
 	   				system("pause");
 			}
 	}
