@@ -160,7 +160,7 @@ int main ()
 
 			 	case 4:
 			 		printf("Obrigado por utilizar o sistema de cadastros!\n\n");
-			 		return:0;
+			 		return 0;
 			 	break;
 			 		
 	   			
