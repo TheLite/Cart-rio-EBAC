@@ -135,7 +135,8 @@ int main ()
     	printf("Escolha a opção desejada:\n\n"); // \t(x) gera um tópico com um numero atribuido (Funciona com letras, porém a variavel não pode ser inteira se for o caso). 
     	printf("\t1 Registrar Nomes.\n"); // \n = pular uma linha, evita poluição visual.
     	printf("\t2 Consultar Nomes.\n");
-    	printf("\t3 Deletar Nomes.\n"); 
+    	printf("\t3 Deletar Nomes.\n");
+	printf("\t4 Sair do sistema.\n");
 		printf("Opção:"); //fim do menu visivel p/ user
     
    		scanf("%d", &opcao); //Armazenamento de escolhas para o usuário sendo o scanf("%d"[aqui alocamos a variavel inteira], &opcao [& serve para demonstrar **onde a variavel será armazenada)
